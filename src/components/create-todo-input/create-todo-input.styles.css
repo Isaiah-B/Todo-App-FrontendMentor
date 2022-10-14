@@ -1,0 +1,47 @@
+.todo-container {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  
+  padding: 1.2rem 2.6rem;
+  border-radius: 5px;
+  margin-bottom: 2.4rem;
+  background-color: var(--item-tab);
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.8rem;
+  border: none;
+  padding: 1rem;
+  background: none;
+  width: 86%;
+
+  color: var(--text);
+  caret-color: var(--light-blue);
+}
+
+input::placeholder {
+  font-size: 1.8rem;
+  color: var(--text-secondary);
+  transform: translateY(2px);
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+
+.radio-circle {
+  border: 1px solid var(--item-tab-border);
+  border-radius: 50%;
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+@media (max-width: 36em) {
+  .todo-container {
+    padding: 1.6rem 2.6rem;
+  }
+}

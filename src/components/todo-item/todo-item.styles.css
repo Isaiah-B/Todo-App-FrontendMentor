@@ -1,0 +1,92 @@
+.item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2.1rem 2.6rem;
+  border-bottom: 1px solid var(--item-tab-border);
+  background-color: var(--item-tab);
+}
+
+.first {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.container-left {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.content {
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-top: 0.3rem;
+}
+
+.remove-button {
+  display: none;
+  background: none;
+  border: none;
+}
+
+.item-container:hover .remove-button {
+  display: block;
+}
+
+.completed p {
+  text-decoration: line-through;
+  color: var(--text-inactive);
+}
+
+.check-button {
+  background: none;
+  border: 1px solid var(--item-tab-border);
+  border-radius: 50%;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+}
+
+.item-container:not(.completed) .check-button:hover {
+  border: 1px solid transparent;
+
+  background: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%)) border-box;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) padding-box,
+    linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box,
+  linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.completed .check-button:hover {
+  transform: scale(1.1);
+}
+
+.completed .check-button {
+  background-image: 
+    url('../../assets/icons/icon-check.svg'), 
+    linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+@media (max-width: 36em) {
+  .remove-button {
+    display: block;
+  }
+}
+
+@media (max-width: 24em) {
+  .item-container {
+    padding: 2.4rem 2.6rem;
+  }
+  
+  .check-button {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+}

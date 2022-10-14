@@ -1,0 +1,12 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 5.4rem;
+}
+
+.instructions {
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+}

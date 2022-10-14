@@ -1,25 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useContext } from 'react';
+import { DragDropContext, DropResult } from 'react-beautiful-dnd';
+
+import { ThemeContext } from './context/themeContext';
+
+import ThemeButton from './components/theme-button/theme-button.component';
+import CreateTodoInput from './components/create-todo-input/create-todo-input.component';
 import './App.css';
+import TodoList from './components/todo-list/todo-list.component';
+import { TodoContext } from './context/todoContext';
 
 function App() {
+  const { theme } = useContext(ThemeContext);
+  const { todos, updateList } = useContext(TodoContext);
+
+  document.documentElement.className = theme;
+
+  const handleOnDragEnd = (result: DropResult) => {
+    const { source, destination } = result;
+
+    if (!destination) return;
+
+    if (destination.index === source.index) {
+      return;
+    }
+
+    const list = [...todos];
+    const [draggedItem] = list.splice(source.index, 1);
+
+    list.splice(destination.index, 0, draggedItem);
+    updateList(list);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DragDropContext onDragEnd={handleOnDragEnd}>
+      <div className="header-bg" />
+      <div className="container">
+        <div className="header">
+          <h1>Todo</h1>
+          <ThemeButton />
+        </div>
+        <CreateTodoInput />
+        <TodoList />
+      </div>
+    </DragDropContext>
   );
 }
 
