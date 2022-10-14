@@ -19,8 +19,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution]()
-- [Live Site]()
+- [Solution](https://www.frontendmentor.io/solutions/todo-app-using-react-typescript-tLTy2hDhQx)
+- [Live Site](https://todo-fm-app.netlify.app/)
 
 ### Built with
 
