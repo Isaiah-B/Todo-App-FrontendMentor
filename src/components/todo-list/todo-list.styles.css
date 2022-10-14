@@ -3,6 +3,7 @@
   flex-direction: column;
 
   margin-bottom: 5.4rem;
+  box-shadow: var(--shadow);
 }
 
 .instructions {

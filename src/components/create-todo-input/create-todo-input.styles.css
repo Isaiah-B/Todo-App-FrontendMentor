@@ -36,8 +36,8 @@ input:focus {
 .radio-circle {
   border: 1px solid var(--item-tab-border);
   border-radius: 50%;
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 @media (max-width: 36em) {

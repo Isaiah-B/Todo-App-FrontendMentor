@@ -27,7 +27,7 @@ body {
   --item-tab: hsl(0, 0%, 98%);
   --item-tab-border: hsl(236, 33%, 92%);
   --menu-hover: hsl(235, 19%, 35%);
-  --shadow: box-shadow: 0 44px 35px rgb(0 0 0 / 5%);
+  --shadow: 0 44px 35px rgb(0 0 0 / 5%);
   --light-blue: hsl(220, 98%, 61%);
 }
 
@@ -42,7 +42,7 @@ body {
   --item-tab: hsl(235, 24%, 19%);
   --item-tab-border: hsl(237, 14%, 26%);
   --menu-hover: hsl(234, 39%, 85%);
-  --shadow: box-shadow: 0 44px 25px rgb(0 0 0 / 30%);
+  --shadow: 0 44px 25px rgb(0 0 0 / 20%);
   --light-blue: hsl(220, 98%, 61%);
 }
 
